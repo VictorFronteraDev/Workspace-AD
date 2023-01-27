@@ -1,0 +1,70 @@
+package ejemplos;
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSourceFactory;
+
+public class InsertarCiclista {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		String vdirector, vnomequip=null;
+		Connection con = null;
+		String sql;
+		PreparedStatement pstmt;
+		
+		Scanner tec=new Scanner (System.in);
+		System.out.println("Nombre director");
+		vdirector=tec.nextLine();
+		
+		System.out.println("Equipo: ");
+		vnomequip=tec.nextLine();
+		
+		try {
+			Properties propiedades = new Properties();
+			propiedades.load(new FileInputStream("configuracion\\PropiedadesCiclismo.txt"));
+			
+			DataSource ds = BasicDataSourceFactory.createDataSource(propiedades);
+			con = ds.getConnection();
+			System.out.println("Conexion realizada");
+			//Acceso a las base de datos
+			sql="insert into equipo values(?,?);";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vnomequip);
+			pstmt.setString(2, vdirector);
+			pstmt.executeUpdate();
+			
+			
+			
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+		} catch(IOException e) {
+			e.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(con!=null && !con.isClosed())
+					con.close();
+					System.out.println("Desconectado");
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+

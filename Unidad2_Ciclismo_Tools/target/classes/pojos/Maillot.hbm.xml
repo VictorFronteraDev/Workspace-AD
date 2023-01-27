@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 dic. 2022 9:05:46 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="pojos.Maillot" table="maillot" catalog="ciclismo" optimistic-lock="version">
+        <id name="codigo" type="string">
+            <column name="codigo" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipo" type="string">
+            <column name="tipo" length="30" not-null="true" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="20" not-null="true" />
+        </property>
+        <property name="premio" type="int">
+            <column name="premio" not-null="true" />
+        </property>
+        <set name="llevars" table="llevar" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codigo" length="3" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Llevar" />
+        </set>
+    </class>
+</hibernate-mapping>

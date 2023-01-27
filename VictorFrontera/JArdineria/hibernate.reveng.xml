@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="jardineria" match-name="clientes"/>
+  <table-filter match-catalog="jardineria" match-name="detallepedidos"/>
+  <table-filter match-catalog="jardineria" match-name="empleados"/>
+  <table-filter match-catalog="jardineria" match-name="gamasproductos"/>
+  <table-filter match-catalog="jardineria" match-name="oficinas"/>
+  <table-filter match-catalog="jardineria" match-name="pagos"/>
+  <table-filter match-catalog="jardineria" match-name="pedidos"/>
+  <table-filter match-catalog="jardineria" match-name="productos"/>
+</hibernate-reverse-engineering>

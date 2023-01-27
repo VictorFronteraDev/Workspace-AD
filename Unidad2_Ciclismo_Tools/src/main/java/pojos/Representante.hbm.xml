@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 dic. 2022 9:05:46 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="pojos.Representante" table="representante" catalog="ciclismo" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="equipo" class="pojos.Equipo" fetch="select">
+            <column name="nom_eq" length="45" unique="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

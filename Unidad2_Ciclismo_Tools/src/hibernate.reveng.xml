@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="ciclismo" match-name="ciclista"/>
+  <table-filter match-catalog="ciclismo" match-name="coche"/>
+  <table-filter match-catalog="ciclismo" match-name="equipo"/>
+  <table-filter match-catalog="ciclismo" match-name="etapa"/>
+  <table-filter match-catalog="ciclismo" match-name="gana"/>
+  <table-filter match-catalog="ciclismo" match-name="ganadores"/>
+  <table-filter match-catalog="ciclismo" match-name="llevar"/>
+  <table-filter match-catalog="ciclismo" match-name="maillot"/>
+  <table-filter match-catalog="ciclismo" match-name="premios"/>
+  <table-filter match-catalog="ciclismo" match-name="puerto"/>
+  <table-filter match-catalog="ciclismo" match-name="representante"/>
+</hibernate-reverse-engineering>

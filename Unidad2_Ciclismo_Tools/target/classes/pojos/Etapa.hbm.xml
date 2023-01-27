@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 dic. 2022 9:05:46 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="pojos.Etapa" table="etapa" catalog="ciclismo" optimistic-lock="version">
+        <id name="netapa" type="short">
+            <column name="netapa" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="ciclista" class="pojos.Ciclista" fetch="select">
+            <column name="dorsal" />
+        </many-to-one>
+        <property name="km" type="short">
+            <column name="km" not-null="true" />
+        </property>
+        <property name="salida" type="string">
+            <column name="salida" length="35" not-null="true" />
+        </property>
+        <property name="llegada" type="string">
+            <column name="llegada" length="35" not-null="true" />
+        </property>
+        <set name="puertos" table="puerto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="netapa" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Puerto" />
+        </set>
+        <set name="llevars" table="llevar" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="netapa" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Llevar" />
+        </set>
+    </class>
+</hibernate-mapping>

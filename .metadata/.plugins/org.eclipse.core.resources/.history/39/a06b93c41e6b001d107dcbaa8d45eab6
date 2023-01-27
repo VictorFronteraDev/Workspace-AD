@@ -1,0 +1,96 @@
+package pojos;
+
+import java.util.Date;
+
+public class Ciclista {
+
+	private Integer dorsal;
+	private String nombre;
+	private String nomeq;
+	private Date nacimiento;
+	
+	public Ciclista() {
+		
+	}
+	
+	public Ciclista(int dorsal, String nombre, String nomeq, Date nacimiento) {
+		super();
+		this.dorsal = dorsal;
+		this.nombre = nombre;
+		this.nomeq = nomeq;
+		this.nacimiento = nacimiento;
+	}
+	public int getDorsal() {
+		return dorsal;
+	}
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getNomeq() {
+		return nomeq;
+	}
+	public void setNomeq(String nomeq) {
+		this.nomeq = nomeq;
+	}
+	public Date getNacimiento() {
+		return nacimiento;
+	}
+	public void setNacimiento(Date nacimiento) {
+		this.nacimiento = nacimiento;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + dorsal;
+		result = prime * result + ((nacimiento == null) ? 0 : nacimiento.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((nomeq == null) ? 0 : nomeq.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Ciclista other = (Ciclista) obj;
+		if (dorsal != other.dorsal)
+			return false;
+		if (nacimiento == null) {
+			if (other.nacimiento != null)
+				return false;
+		} else if (!nacimiento.equals(other.nacimiento))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (nomeq == null) {
+			if (other.nomeq != null)
+				return false;
+		} else if (!nomeq.equals(other.nomeq))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Ciclista [dorsal=" + dorsal + ", nombre=" + nombre + ", nomeq=" + nomeq + ", nacimiento=" + nacimiento
+				+ "]";
+	}
+	
+	public Integer compareTo(Object obj) {
+		Ciclista other = (Ciclista) obj;
+		return dorsal.compareTo(other.dorsal);
+	}
+	
+}
