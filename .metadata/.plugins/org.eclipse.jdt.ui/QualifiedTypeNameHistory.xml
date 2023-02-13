@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
-    <fullyQualifiedTypeName name="pojos.Premio"/>
     <fullyQualifiedTypeName name="pojos.Equipo"/>
     <fullyQualifiedTypeName name="pojos.Ciclista"/>
     <fullyQualifiedTypeName name="pojos.Etapa"/>
@@ -33,7 +31,6 @@
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -43,15 +40,12 @@
     <fullyQualifiedTypeName name="pojos.Disco"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="pojos.Cancion"/>
-    <fullyQualifiedTypeName name="dao.DaoArtista"/>
     <fullyQualifiedTypeName name="pojos.Pertenece"/>
     <fullyQualifiedTypeName name="dao.DaoPertenece"/>
     <fullyQualifiedTypeName name="pojos.PerteneceId"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="pojos.Companyia"/>
     <fullyQualifiedTypeName name="dao.DaoCompanyia"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="dao.DaoDisco"/>
     <fullyQualifiedTypeName name="hibernate.UtilesHibernate"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="dao.DaoClub"/>
@@ -59,5 +53,11 @@
     <fullyQualifiedTypeName name="dao.DaoGrupo"/>
     <fullyQualifiedTypeName name="pojos.Club"/>
     <fullyQualifiedTypeName name="java.lang.Short"/>
+    <fullyQualifiedTypeName name="dao.DaoDisco"/>
     <fullyQualifiedTypeName name="exceptions.BusinessException"/>
+    <fullyQualifiedTypeName name="dao.DaoArtista"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 </qualifiedTypeNameHistroy>

@@ -50,7 +50,6 @@ public class _01b {
 			System.out.println(e);
 		}
 		
-		
 		tec.close();
 	}
 
